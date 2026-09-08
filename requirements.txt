@@ -1,0 +1,9 @@
+# Minimum needed to run the agent and the website backend.
+# For retraining or rebuilding the RAG index, also install requirements-train.txt
+numpy>=1.24
+pandas>=2.0
+requests>=2.31
+python-dotenv>=1.0
+groq>=0.11
+fastapi>=0.110
+uvicorn[standard]>=0.27

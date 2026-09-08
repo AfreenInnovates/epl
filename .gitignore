@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# Data: regenerate with scripts/download_data.py
+data/raw/*
+!data/raw/.gitkeep
+data/processed/web_index/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Tooling
+.pytest_cache/
