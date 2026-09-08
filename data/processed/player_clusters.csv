@@ -1,0 +1,398 @@
+Player Name,Club,Position,Cluster,Distance_to_Centroid
+Ben White,Arsenal,DEF,3,7.629664194344686
+Bukayo Saka,Arsenal,MID,2,6.6723842989606545
+David Raya,Arsenal,GKP,0,2.975200000088974
+Declan Rice,Arsenal,MID,3,3.9565768962104646
+Ethan Nwaneri,Arsenal,MID,1,6.1321149072310535
+Gabriel Jesus,Arsenal,FWD,1,7.107328524213911
+Gabriel Magalhães,Arsenal,DEF,2,5.120186799393044
+Gabriel Martinelli,Arsenal,MID,3,4.228164493656637
+Jakub Kiwior,Arsenal,DEF,2,3.4618169783696544
+Jorginho,Arsenal,MID,1,4.0470557251876444
+Jurriën Timber,Arsenal,DEF,2,4.848081974972691
+Kai Havertz,Arsenal,FWD,2,6.141242124289448
+Leandro Trossard,Arsenal,MID,2,4.386796773527163
+Martin Ødegaard,Arsenal,MID,3,5.0486034920552845
+Mikel Merino,Arsenal,MID,3,7.752453430480488
+Myles Lewis-Skelly,Arsenal,DEF,2,11.425494297410093
+Oleksandr Zinchenko,Arsenal,DEF,1,2.887402110743355
+Raheem Sterling,Arsenal,MID,1,4.713294537723753
+Riccardo Calafiori,Arsenal,DEF,2,5.655450752816853
+Thomas Partey,Arsenal,MID,2,3.224651086542718
+William Saliba,Arsenal,DEF,2,4.175265843575094
+Amadou Onana,Aston Villa,MID,2,3.5737655581457144
+Axel Disasi,Aston Villa,DEF,1,2.7385837726028526
+Boubacar Kamara,Aston Villa,MID,2,4.095434434181688
+Diego Carlos,Aston Villa,DEF,1,3.077158659933625
+Emiliano Martínez,Aston Villa,GKP,0,3.5341700902431135
+Ezri Konsa,Aston Villa,DEF,2,4.519318757511515
+Ian Maatsen,Aston Villa,DEF,2,6.038618332490608
+Jacob Ramsey,Aston Villa,MID,3,4.606880227283354
+Jhon Durán,Aston Villa,FWD,1,10.74175298703515
+John McGinn,Aston Villa,MID,2,3.8542977284963853
+Lamare Bogarde,Aston Villa,DEF,1,2.8145273800310013
+Leon Bailey,Aston Villa,MID,2,5.418033198983372
+Lucas Digne,Aston Villa,DEF,2,3.693575070283153
+Marco Asensio,Aston Villa,DEF,1,3.850687504040404
+Marcus Rashford,Aston Villa,MID,3,4.562288819797493
+Matty Cash,Aston Villa,DEF,2,3.3102516931742216
+Morgan Rogers,Aston Villa,MID,2,4.3101269098150095
+Ollie Watkins,Aston Villa,FWD,3,6.9015411654502055
+Pau Torres,Aston Villa,DEF,2,4.397792326135609
+Ross Barkley,Aston Villa,MID,1,3.623622097804123
+Tyrone Mings,Aston Villa,DEF,2,6.802193942857035
+Youri Tielemans,Aston Villa,MID,2,3.255727962685074
+Adam Smith,Bournemouth,DEF,2,3.1487714165384086
+Alex Scott,Bournemouth,MID,1,2.971302202235215
+Antoine Semenyo,Bournemouth,MID,3,5.78621301334722
+Dango Ouattara,Bournemouth,MID,3,4.449481483380088
+David Brooks,Bournemouth,MID,2,10.301454026184418
+Dean Huijsen,Bournemouth,DEF,2,4.184644301553381
+Evanilson,Bournemouth,FWD,2,6.049014024372586
+Illia Zabarnyi,Bournemouth,DEF,2,4.483200275131483
+Julián Araujo,Bournemouth,DEF,1,2.740502107501021
+Justin Kluivert,Bournemouth,MID,2,4.399246077476684
+Kepa,Bournemouth,GKP,0,3.603843592547101
+Lewis Cook,Bournemouth,MID,2,3.1963985235498895
+Marcos Senesi,Bournemouth,DEF,3,6.112777244493218
+Marcus Tavernier,Bournemouth,MID,2,5.371118060776965
+Mark Travers,Bournemouth,GKP,0,6.180092681601359
+Milos Kerkez,Bournemouth,DEF,3,5.669299427012278
+Ryan Christie,Bournemouth,MID,2,3.28485029712951
+Tyler Adams,Bournemouth,MID,2,4.333164275516262
+Bryan Mbeumo,Brentford,MID,3,4.477409574724116
+Christian Nørgaard,Brentford,MID,2,3.6153520228443847
+Ethan Pinnock,Brentford,DEF,2,5.534167469531686
+Keane Lewis-Potter,Brentford,MID,2,2.704563111071434
+Kevin Schade,Brentford,MID,2,4.537683109444794
+Kristoffer Ajer,Brentford,DEF,2,2.933606800015114
+Mads Roerslev,Brentford,DEF,2,5.495530497999121
+Mark Flekken,Brentford,GKP,0,3.500809230350714
+Mathias Jensen,Brentford,MID,1,2.578870593326024
+Michael Kayode,Brentford,DEF,1,2.8409583206975144
+Mikkel Damsgaard,Brentford,MID,2,4.507827298427331
+Nathan Collins,Brentford,DEF,2,3.274925278480175
+Sepp van den Berg,Brentford,DEF,2,3.616280043174927
+Vitaly Janelt,Brentford,MID,2,4.846799344534273
+Yehor Yarmoliuk,Brentford,MID,3,6.425254797481573
+Yoane Wissa,Brentford,FWD,3,5.148580891421466
+Adam Webster,Brighton & Hove Albion,DEF,1,5.492530283418232
+Bart Verbruggen,Brighton & Hove Albion,GKP,0,6.225083137578447
+Brajan Gruda,Brighton & Hove Albion,MID,1,5.479355472959579
+Carlos Baleba,Brighton & Hove Albion,MID,2,3.2375791847828927
+Danny Welbeck,Brighton & Hove Albion,FWD,2,6.154768048051874
+Diego Gómez,Brighton & Hove Albion,MID,1,3.6819878148282883
+Georginio Rutter,Brighton & Hove Albion,MID,3,4.796652407703957
+Igor Julio,Brighton & Hove Albion,DEF,3,8.471438930678515
+Jack Hinshelwood,Brighton & Hove Albion,MID,2,3.6424449510626964
+Jan Paul van Hecke,Brighton & Hove Albion,DEF,2,3.982344091318956
+João Pedro,Brighton & Hove Albion,FWD,3,4.892872219547977
+Joël Veltman,Brighton & Hove Albion,DEF,2,6.450458587350637
+Kaoru Mitoma,Brighton & Hove Albion,FWD,2,3.851670917903128
+Lewis Dunk,Brighton & Hove Albion,DEF,2,4.013365842465414
+Mats Wieffer,Brighton & Hove Albion,MID,2,6.728124298333386
+Matt O'Riley,Brighton & Hove Albion,MID,2,8.32156488000747
+Pervis Estupiñán,Brighton & Hove Albion,DEF,2,3.8289875197769434
+Simon Adingra,Brighton & Hove Albion,MID,3,10.657405558242223
+Tariq Lamptey,Brighton & Hove Albion,DEF,1,2.9145356062879553
+Yankuba Minteh,Brighton & Hove Albion,MID,2,3.9006499195741617
+Yasin Ayari,Brighton & Hove Albion,MID,2,2.7846648082943
+Christopher Nkunku,Chelsea,MID,3,7.613552926180552
+Cole Palmer,Chelsea,MID,2,7.72810457028569
+Enzo Fernández,Chelsea,MID,2,6.112648046555191
+Filip Jørgensen,Chelsea,GKP,0,5.217754214572846
+Jadon Sancho,Chelsea,MID,2,4.620678867762991
+Levi Colwill,Chelsea,DEF,2,2.9444442611179684
+Malo Gusto,Chelsea,DEF,2,3.404006726587799
+Marc Cucurella,Chelsea,DEF,2,2.8798218180709703
+Moisés Caicedo,Chelsea,MID,2,4.146322534281764
+Nicolas Jackson,Chelsea,FWD,3,6.602815921627408
+Noni Madueke,Chelsea,MID,3,4.85946585665944
+Pedro Neto,Chelsea,MID,2,4.629758843832178
+Reece James,Chelsea,DEF,2,4.323120775418817
+Robert Sánchez,Chelsea,GKP,0,3.7623904026768926
+Roméo Lavia,Chelsea,MID,1,2.982646482890658
+Tosin Adarabioyo,Chelsea,DEF,2,5.612022725081213
+Trevoh Chalobah,Chelsea,DEF,2,2.8991517636011426
+Wesley Fofana,Chelsea,DEF,2,6.432627968025498
+Adam Wharton,Crystal Palace,MID,2,3.213266362173007
+Chris Richards,Crystal Palace,DEF,2,8.220737600253383
+Daichi Kamada,Crystal Palace,MID,2,6.612278378495022
+Daniel Muñoz,Crystal Palace,DEF,2,4.614806398723862
+Dean Henderson,Crystal Palace,GKP,0,3.306751399317725
+Eberechi Eze,Crystal Palace,MID,1,5.855652444484162
+Eddie Nketiah,Crystal Palace,FWD,3,8.872621121425693
+Ismaïla Sarr,Crystal Palace,MID,2,5.578827078320701
+Jean-Philippe Mateta,Crystal Palace,FWD,3,5.78905775254326
+Jefferson Lerma,Crystal Palace,MID,2,2.5107593764194815
+Jordan Ayew,Crystal Palace,MID,2,4.406976496333865
+Justin Devenny,Crystal Palace,MID,1,2.269927212557395
+Marc Guéhi,Crystal Palace,DEF,2,5.448213671551719
+Maxence Lacroix,Crystal Palace,DEF,2,4.1666746131509225
+Nathaniel Clyne,Crystal Palace,DEF,1,2.981264274659876
+Tyrick Mitchell,Crystal Palace,DEF,2,3.9223182129389222
+Will Hughes,Crystal Palace,MID,2,5.787999233294232
+Abdoulaye Doucouré,Everton,MID,2,3.531559022303932
+Adam Armstrong,Everton,FWD,2,4.922317042880658
+Ashley Young,Everton,DEF,2,4.133333784451017
+Beto,Everton,FWD,3,5.051828673079016
+Carlos Alcaraz,Everton,MID,1,4.000575475308017
+Dominic Calvert-Lewin,Everton,FWD,3,7.6796006523055205
+Dwight McNeil,Everton,MID,3,5.121185282274122
+Idrissa Gueye,Everton,MID,2,4.425261156523414
+Iliman Ndiaye,Everton,FWD,2,5.587399818551596
+Jack Harrison,Everton,MID,2,4.121540107728955
+Jake O'Brien,Everton,MID,2,5.060032829118547
+James Garner,Everton,MID,2,4.203541927248228
+James Tarkowski,Everton,DEF,2,4.127185187600048
+Jarrad Branthwaite,Everton,DEF,3,6.347226676870163
+Jesper Lindstrøm,Everton,MID,2,4.151003427683332
+Jordan Pickford,Everton,GKP,0,6.052082555995388
+Michael Keane,Everton,DEF,2,5.183236788238606
+Orel Mangala,Everton,MID,2,5.640742784543842
+Tim Iroegbunam,Everton,MID,1,5.57327839694148
+Vitalii Mykolenko,Everton,DEF,2,3.176326262345795
+Adama Traoré,Fulham,MID,3,5.231817184506135
+Alex Iwobi,Fulham,MID,3,3.6139954646253654
+Andreas Pereira,Fulham,MID,2,4.007599764657888
+Antonee Robinson,Fulham,DEF,2,4.315723188681254
+Bernd Leno,Fulham,GKP,0,4.699319338361958
+Calvin Bassey,Fulham,DEF,2,3.9242451362329924
+Emile Smith Rowe,Fulham,MID,2,3.2730154099349646
+Harry Wilson,Fulham,MID,2,5.519214410130578
+Issa Diop,Fulham,DEF,2,5.431147247763572
+Joachim Andersen,Fulham,DEF,2,5.769016104142427
+Kenny Tete,Fulham,DEF,3,5.107344117879514
+Raúl Jiménez,Fulham,FWD,3,5.292879567850453
+Reiss Nelson,Fulham,MID,1,2.2055287915715467
+Rodrigo Muniz,Fulham,FWD,3,7.953587345800787
+Ryan Sessegnon,Fulham,DEF,1,5.5144067821176534
+Sander Berge,Fulham,MID,2,2.7611296551943116
+Sasa Lukic,Fulham,MID,3,5.972572909481783
+Timothy Castagne,Fulham,DEF,2,4.229398994056003
+Tom Cairney,Fulham,MID,1,7.884904740493983
+Alex Palmer,Ipswich Town,MID,0,8.446131680057873
+Arijanet Muric,Ipswich Town,GKP,0,5.81498907496894
+Axel Tuanzebe,Ipswich Town,DEF,2,4.596626994963141
+Ben Johnson,Ipswich Town,DEF,2,4.512382628011806
+Cameron Burgess,Ipswich Town,DEF,2,6.887542061978816
+Christian Walton,Ipswich Town,GKP,0,4.695964753167145
+Conor Chaplin,Ipswich Town,MID,1,2.3251261835800703
+Dara O'Shea,Ipswich Town,DEF,2,5.3646412780023
+George Hirst,Ipswich Town,FWD,1,4.530806012017052
+Jack Clarke,Ipswich Town,FWD,3,5.0873052443386255
+Jack Taylor,Ipswich Town,MID,1,2.45742162384623
+Jacob Greaves,Ipswich Town,DEF,2,5.1767378078957025
+Jaden Philogene,Ipswich Town,MID,1,6.020180821976798
+Jens Cajuste,Ipswich Town,MID,2,3.346831101666232
+Julio Enciso,Ipswich Town,MID,3,8.191060333562959
+Kalvin Phillips,Ipswich Town,MID,2,5.162255784668411
+Leif Davis,Ipswich Town,DEF,2,5.9455411621357594
+Liam Delap,Ipswich Town,FWD,2,5.651503981260484
+Luke Woolfenden,Ipswich Town,DEF,2,4.910257461718047
+Nathan Broadhead,Ipswich Town,MID,1,2.832594244011341
+Omari Hutchinson,Ipswich Town,MID,2,4.169865888072225
+Sam Morsy,Ipswich Town,MID,2,4.27316389481595
+Sam Szmodics,Ipswich Town,FWD,3,6.520915841739403
+Abdul Fatawu,Leicester City,MID,1,4.44545128236618
+Bilal El Khannouss,Leicester City,MID,2,3.7977776321917904
+Bobby De Cordova-Reid,Leicester City,MID,1,3.1082126342470064
+Boubakary Soumaré,Leicester City,MID,2,3.7771876741919574
+Caleb Okoli,Leicester City,DEF,3,8.262863735207176
+Conor Coady,Leicester City,DEF,2,4.11928067414464
+Facundo Buonanotte,Leicester City,MID,2,5.262304526663561
+Harry Winks,Leicester City,MID,3,7.002527873929696
+Jakub Stolarczyk,Leicester City,GKP,0,3.400045217237407
+James Justin,Leicester City,DEF,2,3.5528670844161327
+Jamie Vardy,Leicester City,FWD,2,7.245429091797504
+Jannik Vestergaard,Leicester City,DEF,2,6.015551443332712
+Kasey McAteer,Leicester City,MID,1,2.7098878796113945
+Luke Thomas,Leicester City,DEF,2,3.577970482598954
+Mads Hermansen,Leicester City,GKP,0,5.657717831714821
+Oliver Skipp,Leicester City,MID,3,8.442081698396292
+Patson Daka,Leicester City,FWD,1,3.178560673387702
+Stephy Mavididi,Leicester City,MID,2,6.040380685686394
+Victor Kristiansen,Leicester City,DEF,2,4.691344035746637
+Wilfred Ndidi,Leicester City,MID,2,4.346013840021979
+Wout Faes,Leicester City,DEF,2,4.000526454985987
+Alexis Mac Allister,Liverpool,MID,2,5.496994334062276
+Alisson Becker,Liverpool,GKP,0,4.796834480928108
+Andy Robertson,Liverpool,DEF,2,5.098825154031291
+Caoimhín Kelleher,Liverpool,GKP,0,11.174552842630657
+Cody Gakpo,Liverpool,FWD,3,6.2194492073024525
+Conor Bradley,Liverpool,DEF,1,3.3126232320327653
+Curtis Jones,Liverpool,MID,2,4.270212318216691
+Darwin Núñez,Liverpool,FWD,3,6.244549296259073
+Diogo Jota,Liverpool,FWD,3,7.019864095904794
+Dominik Szoboszlai,Liverpool,MID,2,4.485031082209203
+Ibrahima Konaté,Liverpool,DEF,2,4.63423639156873
+Jarell Quansah,Liverpool,DEF,1,9.626502495597387
+Joe Gomez,Liverpool,DEF,1,3.3799103665147574
+Kostas Tsimikas,Liverpool,DEF,1,3.2439095794095656
+Luis Díaz,Liverpool,MID,2,4.759619949829267
+Mohamed Salah,Liverpool,MID,3,7.1593242900562135
+Ryan Gravenberch,Liverpool,MID,2,3.324254302175338
+Trent Alexander-Arnold,Liverpool,DEF,2,3.7448751635874027
+Virgil van Dijk,Liverpool,DEF,2,4.38492775920426
+Abdukodir Khusanov,Manchester City,DEF,1,9.631216504291945
+Bernardo Silva,Manchester City,MID,2,4.2371040863596
+Ederson,Manchester City,GKP,0,5.8062421181934445
+Erling Haaland,Manchester City,FWD,2,7.231178744496132
+Ilkay Gündogan,Manchester City,MID,2,4.110979467176134
+Jack Grealish,Manchester City,MID,1,2.9668718016051314
+Jérémy Doku,Manchester City,MID,2,7.223538267061472
+John Stones,Manchester City,DEF,1,3.5154170835512226
+Josko Gvardiol,Manchester City,DEF,2,3.4851250344420266
+Kevin De Bruyne,Manchester City,MID,3,6.274826593190689
+Kyle Walker,Manchester City,DEF,3,8.363758744292296
+Manuel Akanji,Manchester City,DEF,2,3.615410803786831
+Mateo Kovacic,Manchester City,MID,2,4.40671119074755
+Matheus Nunes,Manchester City,MID,2,4.190156705921476
+Nathan Aké,Manchester City,DEF,1,6.2823494430960265
+Nico González,Manchester City,MID,1,5.1537668600624
+Nico O'Reilly,Manchester City,DEF,1,4.209166546084289
+Omar Marmoush,Manchester City,FWD,3,5.903479719914648
+Phil Foden,Manchester City,MID,2,6.517329271377128
+Rico Lewis,Manchester City,DEF,2,3.6255836756225097
+Rúben Dias,Manchester City,DEF,2,6.229021979606146
+Savinho,Manchester City,FWD,2,6.276381592321366
+Stefan Ortega,Manchester City,GKP,0,3.058287435447101
+Wes Burns,Manchester City,MID,2,5.335214469063668
+Alejandro Garnacho,Manchester United,MID,3,4.183637955265685
+Amad Diallo,Manchester United,MID,2,6.437917768621617
+André Onana,Manchester United,GKP,0,3.3929440497820407
+Bruno Fernandes,Manchester United,MID,3,5.553813263778586
+Casemiro,Manchester United,MID,2,4.274874322757738
+Christian Eriksen,Manchester United,MID,2,8.653862019935232
+Diogo Dalot,Manchester United,DEF,2,3.655723804386846
+Harry Maguire,Manchester United,DEF,2,3.7152929203200302
+Joshua Zirkzee,Manchester United,FWD,3,4.066435448377469
+Kobbie Mainoo,Manchester United,MID,2,4.2712940797103505
+Leny Yoro,Manchester United,DEF,2,4.967952460535552
+Lisandro Martínez,Manchester United,DEF,2,3.0369884906808142
+Manuel Ugarte,Manchester United,MID,2,5.52282888326032
+Mason Mount,Manchester United,MID,1,3.4851276722032454
+Matthijs de Ligt,Manchester United,DEF,2,2.6706825052567367
+Noussair Mazraoui,Manchester United,DEF,2,3.3169907918453796
+Patrick Dorgu,Manchester United,DEF,1,5.653234022716369
+Rasmus Højlund,Manchester United,FWD,3,4.108423455185645
+Victor Lindelöf,Manchester United,DEF,1,3.826222222420487
+Alexander Isak,Newcastle United,FWD,3,5.944847179202137
+Anthony Gordon,Newcastle United,MID,3,3.067798935129671
+Bruno Guimarães,Newcastle United,MID,3,5.506341680849189
+Dan Burn,Newcastle United,DEF,2,4.798618341702638
+Fabian Schär,Newcastle United,DEF,2,3.614274252965142
+Harvey Barnes,Newcastle United,MID,2,4.986829582961039
+Jacob Murphy,Newcastle United,MID,2,5.392719018398185
+Joe Willock,Newcastle United,MID,2,4.973004650521288
+Joelinton,Newcastle United,MID,2,4.20419408116529
+Kieran Trippier,Newcastle United,DEF,2,4.221156421248677
+Lewis Hall,Newcastle United,DEF,2,6.8970572030594735
+Martin Dúbravka,Newcastle United,GKP,0,7.902118400225126
+Nick Pope,Newcastle United,GKP,0,4.6198182390847995
+Sandro Tonali,Newcastle United,MID,2,3.9569800674752935
+Sean Longstaff,Newcastle United,MID,1,3.2802228392867834
+Tino Livramento,Newcastle United,DEF,2,3.5062383088991926
+Álex Moreno,Nottingham Forest,DEF,3,9.669492672595316
+Anthony Elanga,Nottingham Forest,MID,3,4.194308227094984
+Callum Hudson-Odoi,Nottingham Forest,MID,2,3.6985384116769633
+Chris Wood,Nottingham Forest,FWD,1,6.734499550591014
+Elliot Anderson,Nottingham Forest,MID,2,3.215702680967955
+Ibrahim Sangaré,Nottingham Forest,MID,1,3.8214227066359787
+Jota Silva,Nottingham Forest,FWD,1,5.225327900128726
+Matz Sels,Nottingham Forest,GKP,0,4.729359258550972
+Morato,Nottingham Forest,DEF,1,5.101073014268147
+Morgan Gibbs-White,Nottingham Forest,MID,3,4.127484618419595
+Murillo,Nottingham Forest,DEF,2,6.17915018837922
+Nathan Wood,Nottingham Forest,DEF,1,5.299962181989419
+Neco Williams,Nottingham Forest,DEF,2,4.911528290476263
+Nicolás Domínguez,Nottingham Forest,MID,2,4.267926303429456
+Nikola Milenkovic,Nottingham Forest,DEF,2,4.315545079615014
+Ola Aina,Nottingham Forest,DEF,2,5.106705364830995
+Ryan Yates,Nottingham Forest,MID,2,4.3171844163272315
+Aaron Ramsdale,Southampton,GKP,0,7.514361516306666
+Alex McCarthy,Southampton,GKP,0,5.187590182839485
+Cameron Archer,Southampton,FWD,2,6.288012733496592
+Flynn Downes,Southampton,MID,2,4.1415487303757965
+Jack Stephens,Southampton,DEF,2,7.81917382296695
+James Bree,Southampton,DEF,2,3.585418034098295
+Jan Bednarek,Southampton,DEF,2,5.088654077818748
+Joe Aribo,Southampton,MID,2,3.3274826269359115
+Kamaldeen Sulemana,Southampton,MID,3,4.499101389762822
+Kyle Walker-Peters,Southampton,DEF,2,3.88791164674307
+Lesley Ugochukwu,Southampton,MID,2,5.555897267187593
+Mateus Fernandes,Southampton,MID,3,3.657562612757381
+Paul Onuachu,Southampton,FWD,3,9.992775075410378
+Ryan Manning,Southampton,DEF,2,6.687754067509493
+Taylor Harwood-Bellis,Southampton,DEF,2,4.872375479104934
+Tyler Dibling,Southampton,FWD,2,5.553172599526449
+Welington,Southampton,DEF,1,3.932718650116791
+Will Smallbone,Southampton,MID,1,2.8653086870541356
+Yukinari Sugawara,Southampton,DEF,2,3.7869391053594152
+Antonín Kinsky,Tottenham Hotspur,GKP,0,7.22928617541426
+Archie Gray,Tottenham Hotspur,MID,2,4.331625598834038
+Ben Davies,Tottenham Hotspur,DEF,2,4.283232186758563
+Brennan Johnson,Tottenham Hotspur,MID,3,5.796020194895437
+Cristian Romero,Tottenham Hotspur,DEF,2,4.143603125035932
+Dejan Kulusevski,Tottenham Hotspur,MID,2,4.270738081241102
+Destiny Udogie,Tottenham Hotspur,DEF,2,4.939817411429587
+Djed Spence,Tottenham Hotspur,DEF,2,5.308905061674679
+Dominic Solanke,Tottenham Hotspur,FWD,3,4.1874800798244385
+Fraser Forster,Tottenham Hotspur,GKP,0,5.03238478959898
+Guglielmo Vicario,Tottenham Hotspur,GKP,0,4.776084089543038
+James Maddison,Tottenham Hotspur,MID,2,6.342178565243251
+Kevin Danso,Tottenham Hotspur,DEF,1,6.161853166900738
+Lucas Bergvall,Tottenham Hotspur,MID,2,5.829391139008617
+Mathys Tel,Tottenham Hotspur,FWD,2,3.6734646185494877
+Micky van de Ven,Tottenham Hotspur,DEF,2,5.6428930205849595
+Pape Sarr,Tottenham Hotspur,MID,2,3.3670752133135475
+Pedro Porro,Tottenham Hotspur,DEF,2,3.0430056430341237
+Radu Dragusin,Tottenham Hotspur,DEF,2,5.770978225835901
+Richarlison,Tottenham Hotspur,FWD,1,6.814189508698335
+Rodrigo Bentancur,Tottenham Hotspur,MID,2,4.977290073578342
+Son Heung-Min,Tottenham Hotspur,MID,3,5.150889521238518
+Timo Werner,Tottenham Hotspur,MID,1,5.976796210883447
+Wilson Odobert,Tottenham Hotspur,FWD,1,3.443566010530598
+Yves Bissouma,Tottenham Hotspur,MID,2,3.9328989093448805
+Aaron Cresswell,West Ham United,DEF,1,4.077863569177014
+Aaron Wan-Bissaka,West Ham United,DEF,2,3.080688115109069
+Alphonse Areola,West Ham United,GKP,0,5.893769680471926
+Carlos Soler,West Ham United,MID,2,4.236896588501408
+Crysencio Summerville,West Ham United,FWD,1,4.3855985256926155
+Edson Álvarez,West Ham United,MID,2,5.753821887123278
+Emerson,West Ham United,GKP,2,3.981803797814111
+Guido Rodríguez,West Ham United,MID,2,5.543677571856969
+James Ward-Prowse,West Ham United,MID,2,5.238626326872413
+Jarrod Bowen,West Ham United,MID,2,4.834563293308651
+Jean-Clair Todibo,West Ham United,DEF,2,5.852582154731619
+Konstantinos Mavropanos,West Ham United,DEF,2,3.9686011128406755
+Lucas Paquetá,West Ham United,MID,3,4.5058972921294265
+Lukasz Fabianski,West Ham United,GKP,0,8.340457493904905
+Maximilian Kilman,West Ham United,DEF,2,5.064334536849145
+Michail Antonio,West Ham United,FWD,1,4.173802056658089
+Mohammed Kudus,West Ham United,MID,3,6.426759265001652
+Niclas Füllkrug,West Ham United,FWD,1,6.630842686416351
+Ollie Scarles,West Ham United,DEF,1,5.914560323471395
+Tomás Soucek,West Ham United,MID,2,3.6392971924421342
+Vladimír Coufal,West Ham United,DEF,2,5.863716551299698
+André,Wolverhampton Wanderers,MID,2,3.712416344592468
+Craig Dawson,Wolverhampton Wanderers,DEF,2,10.26960281369848
+Emmanuel Agbadou,Wolverhampton Wanderers,DEF,3,7.033650902103409
+Gonçalo Guedes,Wolverhampton Wanderers,MID,2,5.161579864624644
+Hwang Hee-Chan,Wolverhampton Wanderers,MID,1,3.825539035573778
+Jean-Ricner Bellegarde,Wolverhampton Wanderers,MID,2,5.243106452718074
+João Gomes,Wolverhampton Wanderers,DEF,2,3.565589114751825
+Jørgen Strand Larsen,Wolverhampton Wanderers,FWD,3,4.294670284818497
+José Sá,Wolverhampton Wanderers,GKP,0,8.063287657318451
+Mario Lemina,Wolverhampton Wanderers,MID,2,3.470484569408441
+Marshall Munetsi,Wolverhampton Wanderers,MID,3,10.42774932806077
+Matheus Cunha,Wolverhampton Wanderers,MID,2,5.2634194163136225
+Matt Doherty,Wolverhampton Wanderers,DEF,2,3.819845243583633
+Nélson Semedo,Wolverhampton Wanderers,DEF,2,2.5579202587677172
+Pablo Sarabia,Wolverhampton Wanderers,MID,1,3.46468845480731
+Rayan Aït-Nouri,Wolverhampton Wanderers,DEF,2,4.076061158754519
+Rodrigo Gomes,Wolverhampton Wanderers,MID,1,3.135827220980454
+Sam Johnstone,Wolverhampton Wanderers,GKP,0,4.414714014016762
+Santiago Bueno,Wolverhampton Wanderers,DEF,2,3.3844880101694255
+Tommy Doyle,Wolverhampton Wanderers,MID,1,2.9860434356540564
+Toti Gomes,Wolverhampton Wanderers,DEF,2,4.714491351248951
