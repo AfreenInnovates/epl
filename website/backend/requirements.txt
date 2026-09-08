@@ -1,0 +1,10 @@
+# Serving dependencies for the website backend.
+# The eplai package itself is installed from the project root: pip install -e ../..
+fastapi>=0.110
+uvicorn[standard]>=0.27
+# pandas 3.x ships a DLL that Windows Application Control blocks on some machines
+pandas>=2.2,<3
+numpy>=1.24
+requests>=2.31
+python-dotenv>=1.0
+groq>=0.11
