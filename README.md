@@ -8,6 +8,9 @@ Instead of asking an LLM to guess who a player resembles, Halfspace gathers
 evidence from learned representations, verified statistics, official-source
 content, and current football web context before writing the answer.
 
+- Blog : https://medium.com/@afreenhossain/from-player-similarity-to-an-evidence-backed-scouting-assistant-building-halfspace-014b478e77fc
+- YouTube : https://youtu.be/elhcbic2pao
+
 ## What It Does
 
 - Finds comparable players using standard, Autoencoder, Siamese, and Triplet representations.
