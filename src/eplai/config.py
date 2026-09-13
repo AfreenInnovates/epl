@@ -26,6 +26,7 @@ RAW_STATS_CSV = RAW_DATA_DIR / "epl_player_stats_24_25.csv"
 PLAYER_KNOWLEDGE_CSV = PROCESSED_DATA_DIR / "player_knowledge.csv"
 PLAYER_CLUSTERS_CSV = PROCESSED_DATA_DIR / "player_clusters.csv"
 WEB_INDEX_DIR = PROCESSED_DATA_DIR / "web_index"
+OFFICIAL_CORPUS_PATH = PROCESSED_DATA_DIR / "official_corpus.jsonl"
 
 KAGGLE_DATASET = "aesika/english-premier-league-player-stats-2425"
 
@@ -40,6 +41,12 @@ class Settings:
 
     groq_api_key: str | None = os.getenv("GROQ_API_KEY")
     anakin_api_key: str | None = os.getenv("ANAKIN_API_KEY")
+    anakin_cache_ttl_seconds: int = int(os.getenv("ANAKIN_CACHE_TTL_SECONDS", "300"))
+    anakin_cache_max_entries: int = int(os.getenv("ANAKIN_CACHE_MAX_ENTRIES", "128"))
+    anakin_rate_limit_requests: int = int(os.getenv("ANAKIN_RATE_LIMIT_REQUESTS", "8"))
+    anakin_rate_limit_window_seconds: int = int(
+        os.getenv("ANAKIN_RATE_LIMIT_WINDOW_SECONDS", "60")
+    )
 
     groq_model: str = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
     embedding_model: str = os.getenv("EMBEDDING_MODEL", "all-MiniLM-L6-v2")
@@ -56,7 +63,17 @@ class Settings:
     groq_timeout: float = float(os.getenv("GROQ_TIMEOUT", "45"))
     groq_max_retries: int = int(os.getenv("GROQ_MAX_RETRIES", "1"))
 
-    cors_origins: str = os.getenv("CORS_ORIGINS", "http://localhost:5173")
+    cors_origins: str = os.getenv(
+        "CORS_ORIGINS",
+        ",".join(
+            [
+                "http://localhost:5173",
+                "http://localhost:5174",
+                "http://127.0.0.1:5173",
+                "http://127.0.0.1:5174",
+            ]
+        ),
+    )
 
     @property
     def allowed_origins(self) -> list[str]:

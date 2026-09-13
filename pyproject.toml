@@ -13,6 +13,7 @@ dependencies = [
     "pandas>=2.0",
     "requests>=2.31",
     "python-dotenv>=1.0",
+    "beautifulsoup4>=4.12",
     "groq>=0.11",
 ]
 
