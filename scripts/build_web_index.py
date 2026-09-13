@@ -16,7 +16,7 @@ import sys
 import _bootstrap  # noqa: F401
 
 from eplai.config import WEB_INDEX_DIR
-from eplai.rag import WebIndex, chunk_documents, scrape_documents, search_results
+from eplai.rag import OfficialCorpus, WebIndex, chunk_documents, scrape_documents, search_results
 from eplai.rag.web import AnakinClient
 
 DEFAULT_PLAYERS = [
@@ -42,6 +42,11 @@ def main() -> int:
         raise SystemExit("ANAKIN_API_KEY is not set. Add it to your .env file.")
 
     documents = []
+
+    official_documents = OfficialCorpus().documents()
+    if official_documents:
+        print(f"Including {len(official_documents)} official corpus pages")
+        documents.extend(official_documents)
 
     for player in args.players:
         query = f"{player} playing style tactical analysis Premier League"

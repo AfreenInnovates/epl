@@ -9,7 +9,8 @@ from __future__ import annotations
 from typing import Any
 
 from ..rag.context import get_player_stats
-from ..rag.web import AnakinClient, WebSearchError, search_results
+from ..rag.corpus import OfficialCorpus
+from ..rag.web import AnakinClient, WebSearchError, scrape_documents, search_results
 from ..similarity import load_store, similar_players_records
 from ..utils import jsonable
 
@@ -123,6 +124,7 @@ def player_stats_tool(
 # whole, three searches were enough to exceed an 8k tokens-per-minute budget
 # before the answer could be written.
 MAX_SNIPPET_CHARS = 320
+MAX_EXCERPT_CHARS = 520
 
 
 def _truncate(text: Any, limit: int = MAX_SNIPPET_CHARS) -> str:
@@ -140,25 +142,65 @@ MAX_WEB_RESULTS = 3
 def search_football_web(query: str, limit: int = 3) -> dict[str, Any]:
     """Web search for tactical and contextual evidence."""
     limit = max(1, min(int(limit or 3), MAX_WEB_RESULTS))
+    official_results = OfficialCorpus().search(query, top_k=min(2, limit))
 
     try:
-        results = search_results(query, limit=limit, client=AnakinClient())
+        client = AnakinClient()
+        results = search_results(query, limit=limit, client=client)
     except WebSearchError as exc:
-        return {"error": str(exc), "results": []}
+        if official_results:
+            return {
+                "query": query,
+                "results": official_results,
+                "anakin_error": str(exc),
+                "rate_limited": exc.retry_after is not None,
+                "retry_after": exc.retry_after,
+            }
+
+        return {
+            "error": str(exc),
+            "results": [],
+            "rate_limited": exc.retry_after is not None,
+            "retry_after": exc.retry_after,
+        }
     except Exception as exc:  # provider/network failure
         return {"error": f"Web search failed: {exc}", "results": []}
 
-    trimmed = [
-        {
-            "title": result.get("title"),
-            "url": result.get("url"),
-            "date": result.get("date"),
-            "snippet": _truncate(result.get("snippet")),
-        }
-        for result in results[:limit]
-    ]
+    try:
+        documents = scrape_documents(results[:limit], client=client, min_words=40)
+    except Exception:
+        documents = []
 
-    return {"query": query, "results": trimmed}
+    documents_by_url = {document.get("url"): document for document in documents}
+    combined_results = official_results + results
+    seen_urls: set[str] = set()
+    trimmed: list[dict[str, Any]] = []
+
+    for result in combined_results:
+        url = result.get("url")
+        if not url or url in seen_urls:
+            continue
+
+        seen_urls.add(url)
+        document = documents_by_url.get(url, {})
+        trimmed.append(
+            {
+                "title": result.get("title"),
+                "url": url,
+                "date": result.get("date"),
+                "snippet": _truncate(result.get("snippet")),
+                "excerpt": _truncate(
+                    document.get("content") or result.get("excerpt"),
+                    limit=MAX_EXCERPT_CHARS,
+                ),
+                "scraped": bool(result.get("scraped")) or bool(document.get("scraped")),
+                "cache_hit": bool(result.get("cache_hit"))
+                or bool(document.get("cache_hit")),
+                "official": bool(result.get("official")),
+            }
+        )
+
+    return {"query": query, "results": trimmed[:limit], "official_count": len(official_results)}
 
 
 TOOL_FUNCTIONS = {
@@ -232,9 +274,17 @@ def result_highlights(tool_name: str, result: Any) -> dict[str, Any] | None:
     if tool_name == "search_football_web":
         return {
             "sources": [
-                {"title": row.get("title"), "url": row.get("url")}
+                {
+                    "title": row.get("title"),
+                    "url": row.get("url"),
+                    "excerpt": row.get("excerpt"),
+                    "scraped": row.get("scraped", False),
+                    "cache_hit": row.get("cache_hit", False),
+                    "official": row.get("official", False),
+                }
                 for row in result.get("results", [])
-            ]
+            ],
+            "anakin_error": result.get("anakin_error"),
         }
 
     return None
@@ -257,6 +307,23 @@ def summarise_result(tool_name: str, result: Any) -> str:
 
     if tool_name == "search_football_web":
         count = len(result.get("results", [])) if isinstance(result, dict) else 0
-        return f"Retrieved {count} web sources"
+        scraped = (
+            sum(1 for row in result.get("results", []) if row.get("scraped"))
+            if isinstance(result, dict)
+            else 0
+        )
+        cached = (
+            sum(1 for row in result.get("results", []) if row.get("cache_hit"))
+            if isinstance(result, dict)
+            else 0
+        )
+        official = (
+            sum(1 for row in result.get("results", []) if row.get("official"))
+            if isinstance(result, dict)
+            else 0
+        )
+        suffix = f" ({cached} reused from cache)" if cached else ""
+        official_suffix = f", including {official} official corpus" if official else ""
+        return f"Retrieved {count} web sources and scraped {scraped} pages{official_suffix}{suffix}"
 
     return "Completed"
