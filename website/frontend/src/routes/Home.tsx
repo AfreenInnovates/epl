@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Crest, PlayerAvatar } from "../components/Media";
+import { ResearchSquad } from "../components/ResearchSquad";
 import {
   CLUBS,
   CLUB_TABLE,
@@ -385,6 +386,22 @@ export function Home({ health, suggestions }: Props) {
       </section>
 
       <Matchups />
+
+      <section className="section section--tint" id="models">
+        <div className="shell">
+          <div className="section__head">
+            <span className="section__eyebrow">New in ScoutLab</span>
+            <h2 className="section__title">Not a chatbot. A visible research room.</h2>
+            <p className="section__lede">
+              Four specialist lanes make the work legible: ML similarity, verified statistics,
+              Anakin web context and structured synthesis. Completed dossiers are replayable
+              from localStorage instead of making you pay for the same run twice.
+            </p>
+          </div>
+
+          <ResearchSquad steps={[]} active={null} status="idle" />
+        </div>
+      </section>
 
       <section className="section section--tight">
         <div className="shell split">
