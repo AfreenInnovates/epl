@@ -75,3 +75,16 @@ class AskResponse(BaseModel):
     question: str
     answer: Answer
     trace: list[dict[str, Any]]
+
+
+class WebRefreshRequest(BaseModel):
+    question: str
+
+
+class WebRefreshResponse(BaseModel):
+    query: str
+    results: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class ResearchRequest(BaseModel):
+    question: str
