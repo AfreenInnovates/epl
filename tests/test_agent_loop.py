@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from eplai.agent import FootballAgent  # noqa: E402
-from eplai.agent.loop import WEB_SEARCH_BUDGET  # noqa: E402
+from eplai.agent.loop import WEB_SEARCH_BUDGET, _recover_synthesis  # noqa: E402
 
 
 # ----------------------------------------------------------------------
@@ -270,6 +270,47 @@ def test_synthesis_carries_no_tool_calls() -> None:
     assert any(
         "ml_player_search" in message["content"] for message in synthesis["messages"]
     )
+
+
+def test_partial_structured_response_is_recovered() -> None:
+    partial = {
+        "title": "Players comparable to Mohamed Salah",
+        "summary": "Son Heung-Min has the closest profile among the players compared.",
+        "similar_players": [
+            {"player": "Son Heung-Min", "reason": "Similar wide-attacking profile."}
+        ],
+    }
+    error = RuntimeError(
+        "Error code: 400 - "
+        + repr({"error": {"failed_generation": json.dumps(partial)}})
+    )
+
+    answer = _recover_synthesis(
+        [
+            {
+                "role": "tool",
+                "content": json.dumps(
+                    {
+                        "results": [
+                            {
+                                "title": "Official player profile",
+                                "url": "https://example.com/player",
+                            }
+                        ]
+                    }
+                ),
+            }
+        ],
+        error,
+    )
+
+    assert answer["title"] == partial["title"]
+    assert answer["similar_players"] == partial["similar_players"]
+    assert answer["sources"] == [
+        {"title": "Official player profile", "url": "https://example.com/player"}
+    ]
+    assert answer["statistical_evidence"] == []
+    assert answer["limitations"]
 
 
 def test_gathering_stops_once_every_tool_has_answered() -> None:

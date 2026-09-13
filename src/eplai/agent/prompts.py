@@ -64,6 +64,11 @@ Now produce the final answer for the user's question.
 
 Return ONLY valid JSON matching the supplied response schema:
 
+All seven top-level keys are mandatory. Never stop after `similar_players`.
+When a section has no evidence, return an empty array for that key. The output
+must always contain `title`, `summary`, `similar_players`,
+`statistical_evidence`, `tactical_evidence`, `limitations`, and `sources`.
+
 - title: a short headline for the answer, in sentence case.
 - summary: two to four sentences answering the question directly.
 - similar_players: the comparable players you found, each with a one-sentence

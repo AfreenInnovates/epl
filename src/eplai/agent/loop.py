@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import time
+import ast
 from typing import Any, Iterator
 
 from ..config import settings
@@ -104,6 +105,119 @@ def _synthesis_messages(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
             flattened.append({"role": role, "content": content})
 
     return flattened
+
+
+def _failed_generation(exc: Exception) -> dict[str, Any] | None:
+    """Recover a provider's partial JSON when strict validation rejects it."""
+    body = getattr(exc, "body", None)
+    generation: Any = None
+
+    if isinstance(body, dict):
+        error = body.get("error")
+        if isinstance(error, dict):
+            generation = error.get("failed_generation")
+
+    if generation is None:
+        text = str(exc)
+        try:
+            raw_body = text.split(" - ", 1)[1]
+            parsed_body = ast.literal_eval(raw_body)
+            error = parsed_body.get("error", {})
+            if isinstance(error, dict):
+                generation = error.get("failed_generation")
+        except (IndexError, SyntaxError, ValueError, TypeError):
+            return None
+
+    if not isinstance(generation, str):
+        return None
+
+    try:
+        parsed = json.loads(generation)
+    except json.JSONDecodeError:
+        return None
+
+    return parsed if isinstance(parsed, dict) else None
+
+
+def _tool_sources(messages: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """Extract source records already returned by the web tool."""
+    sources: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    for message in messages:
+        if message.get("role") != "tool":
+            continue
+
+        try:
+            payload = json.loads(str(message.get("content") or "{}"))
+        except json.JSONDecodeError:
+            continue
+
+        for result in payload.get("results", []):
+            if not isinstance(result, dict):
+                continue
+
+            url = result.get("url")
+            if not isinstance(url, str) or not url or url in seen:
+                continue
+
+            seen.add(url)
+            sources.append({"title": str(result.get("title") or url), "url": url})
+
+    return sources
+
+
+def _recover_synthesis(
+    messages: list[dict[str, Any]], exc: Exception
+) -> dict[str, Any]:
+    """Return a transparent answer instead of dropping a partial dossier."""
+    partial = _failed_generation(exc)
+
+    if partial is None:
+        return empty_answer(
+            "Answer could not be formatted",
+            str(exc)[:800] or "The model returned an unreadable response.",
+            ["The structured-output step failed to produce valid JSON."],
+        )
+
+    answer = empty_answer(
+        str(partial.get("title") or "Answer from available evidence"),
+        str(partial.get("summary") or "The model returned a partial answer."),
+    )
+
+    for key in (
+        "similar_players",
+        "statistical_evidence",
+        "tactical_evidence",
+        "limitations",
+    ):
+        value = partial.get(key)
+        if isinstance(value, list):
+            answer[key] = value
+
+    answer["sources"] = (
+        partial.get("sources")
+        if isinstance(partial.get("sources"), list)
+        else _tool_sources(messages)
+    )
+
+    missing = [
+        key
+        for key in (
+            "statistical_evidence",
+            "tactical_evidence",
+            "limitations",
+            "sources",
+        )
+        if key not in partial
+    ]
+    if missing:
+        answer["limitations"].append(
+            "The provider returned a partial structured response; omitted sections "
+            f"were retained as empty or recovered from tool results: {', '.join(missing)}."
+        )
+
+    return answer
 
 
 def _explain(exc: Exception) -> str:
@@ -394,21 +508,24 @@ class FootballAgent:
 
     def _synthesise(self, messages: list[dict[str, Any]]) -> dict[str, Any]:
         """Ask the model for the final answer in the structured schema."""
-        response = self.client.chat.completions.create(
-            model=self.model,
-            messages=_synthesis_messages(_trim_tool_messages(messages))
-            + [{"role": "system", "content": FINAL_ANSWER_PROMPT}],
-            response_format={
-                "type": "json_schema",
-                "json_schema": {
-                    "name": "football_intelligence_response",
-                    "strict": True,
-                    "schema": FINAL_RESPONSE_SCHEMA,
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=_synthesis_messages(_trim_tool_messages(messages))
+                + [{"role": "system", "content": FINAL_ANSWER_PROMPT}],
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "football_intelligence_response",
+                        "strict": True,
+                        "schema": FINAL_RESPONSE_SCHEMA,
+                    },
                 },
-            },
-            temperature=settings.temperature,
-            max_completion_tokens=settings.max_completion_tokens,
-        )
+                temperature=settings.temperature,
+                max_completion_tokens=settings.max_completion_tokens,
+            )
+        except Exception as exc:
+            return _recover_synthesis(messages, exc)
 
         content = response.choices[0].message.content or "{}"
 
