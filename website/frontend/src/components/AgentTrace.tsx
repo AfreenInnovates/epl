@@ -66,7 +66,7 @@ export function AgentTrace({ steps, active, status }: Props) {
   const live = liveCopy(active, status);
 
   return (
-    <section className="trace" aria-label="Assistant activity">
+    <section className="trace" aria-label="Agent activity">
       <div
         className="trace__live"
         data-kind={live.kind}

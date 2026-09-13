@@ -86,7 +86,12 @@ function collectEvidence(evidence: EvidenceBase, event: AgentEvent): EvidenceBas
     const seen = new Set(evidence.webSources.map((source) => source.url));
     const added = (data.sources ?? []).filter((source) => !seen.has(source.url));
 
-    return { ...evidence, webSources: [...evidence.webSources, ...added] };
+    return {
+      ...evidence,
+      webSources: [...evidence.webSources, ...added],
+      anakinRefreshRequired:
+        evidence.anakinRefreshRequired || Boolean(data.anakin_error),
+    };
   }
 
   return evidence;
@@ -218,13 +223,13 @@ function reduce(state: State, event: AgentEvent): State {
  * The question lives in the URL, so asking is navigation: set `?q=`, and the
  * effect below picks it up.
  */
-export function useAgentStream(question: string, attempt = 0) {
+export function useAgentStream(question: string, attempt = 0, enabled = true) {
   const [state, setState] = useState<State>(INITIAL);
 
   useEffect(() => {
     const asked = question.trim();
 
-    if (!asked) {
+    if (!asked || !enabled) {
       setState(INITIAL);
       return;
     }
@@ -248,7 +253,7 @@ export function useAgentStream(question: string, attempt = 0) {
     );
     // `attempt` is the retry nonce: asking the same question again does not
     // change the URL, so without it a run could never be repeated.
-  }, [question, attempt]);
+  }, [question, attempt, enabled]);
 
   const active = state.steps.find((step) => step.status === "active") ?? null;
 

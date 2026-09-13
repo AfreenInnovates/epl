@@ -34,7 +34,8 @@ export interface ToolHighlights {
   query_player?: string;
   candidates?: MlCandidate[];
   players?: string[];
-  sources?: { title: string; url: string }[];
+  sources?: WebSource[];
+  anakin_error?: string;
 }
 
 export interface MlCandidate {
@@ -50,9 +51,17 @@ export interface EvidenceBase {
   subject: string | null;
   candidates: MlCandidate[];
   statsFor: string[];
-  webSources: { title: string; url: string }[];
+  webSources: WebSource[];
   toolCalls: number;
   refusedSearches: number;
+  agenticResearch?: AgenticResearchReport;
+  anakinRefreshRequired?: boolean;
+}
+
+export interface AgenticResearchReport {
+  summary: string | null;
+  structured_data: Record<string, unknown>;
+  citations: AnswerSource[];
 }
 
 export interface AnswerSimilarPlayer {
@@ -101,6 +110,15 @@ export interface Health {
   stats_available: boolean;
 }
 
+export interface WebSource {
+  title: string;
+  url: string;
+  excerpt?: string;
+  scraped?: boolean;
+  cache_hit?: boolean;
+  official?: boolean;
+}
+
 /** A completed or in-flight step, as rendered in the trace timeline. */
 export interface TraceStep {
   id: string;
@@ -112,4 +130,15 @@ export interface TraceStep {
   durationMs?: number;
   /** Repeats of an identical skipped step are folded into one line. */
   repeats?: number;
+}
+
+export interface SavedResearchRun {
+  id: string;
+  question: string;
+  answer: Answer;
+  evidence: EvidenceBase;
+  steps: TraceStep[];
+  savedAt: number;
+  /** True when the answer was saved while the Anakin lane was unavailable. */
+  webRefreshRequired?: boolean;
 }
